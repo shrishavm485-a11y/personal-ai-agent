@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Personal AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav">
+  <div class="brand">
+    <svg class="mascot" viewBox="0 0 48 48" aria-hidden="true"><rect x="4" y="8" width="40" height="34" rx="6" fill="var(--accent)" stroke="#000" stroke-width="4"/><circle cx="17" cy="23" r="4" fill="#000"/><rect x="27" y="19" width="8" height="8" fill="#000"/><path d="M15 34h18" stroke="#000" stroke-width="4"/><path d="M24 8V2" stroke="#000" stroke-width="4"/></svg>
+    <span>AGENT.01</span>
+  </div>
+  <div class="nav-right">
+    <div class="swatches" role="group" aria-label="Accent color">
+      <button data-color="#ffe14d" style="background:#ffe14d" aria-label="Yellow"></button>
+      <button data-color="#3d5afe" style="background:#3d5afe" aria-label="Blue"></button>
+      <button data-color="#9be83a" style="background:#9be83a" aria-label="Lime"></button>
+      <button data-color="#ff7ab8" style="background:#ff7ab8" aria-label="Pink"></button>
+    </div>
+    <span class="status" id="status"><i></i><b id="statusText">Checking…</b></span>
+  </div>
+</nav>
+<main class="wrap">
+  <header class="hero">
+    <p class="greet" id="greet"></p>
+    <h1>YOUR PERSONAL AI</h1>
+    <p class="sub">One assistant. Endless possibilities.</p>
+  </header>
+  <section class="actions" id="actions" aria-label="Quick actions"></section>
+  <section class="chat">
+    <div class="chat-head">
+      <span>CHAT</span>
+      <button id="clear" class="btn small">Clear chat</button>
+    </div>
+    <div class="log" id="log" aria-live="polite"></div>
+    <div class="composer">
+      <textarea id="input" rows="2" placeholder="Ask me anything..." maxlength="4000"></textarea>
+      <button id="send" class="btn big">SEND</button>
+    </div>
+    <p class="hint">Enter to send · Shift+Enter for a new line</p>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
